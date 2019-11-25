@@ -1,0 +1,350 @@
+EJERCICIO 1
+Ejemplo que muestra el ciclo de vida de una variable y cómo podemos asignarle distintos valores y tipos, de esta manera podemos comprobar como concatena texto o suma valores numéricos.
+
+def main():
+    r = 55
+    a = input('ING UN VALOR: ')
+    a = int(a)
+    x = a
+    a = str(a)
+
+    b = str(int(input ("ing otro:")))
+    
+    
+    c = a+b
+    print(a," + ",b," = ",c)
+    print(r," + ",x," = ",r+x)
+
+
+
+main()
+Resultado
+
+Python 3.7.2 (bundled)
+>>> %cd 'C:\Users\Administrador\Downloads\Python_2019\Ejercicios_clases'
+>>> %Run 'Copia de majuma001.py'
+ING UN VALOR: 45
+ing otro:4
+45  +  4  =  454
+55  +  45  =  100
+>>> 
+Explicación:
+
+"""
+Explicacion Ejercicio 1
+"""
+
+def main():# nuestro metodo de trabajo, definimos main y def main
+    # de aca en mas es nuestro espacio de trabajo
+    
+    r = 55 # definimos la variable "r" y le asignamos un valor de "55"
+    a = input('ING UN VALOR: ') #solicitamos que el usuario ingrese un valor
+    a = int(a) # a ese valor lo onvertimos a entero
+    x = a # le asignamo a la variable "x" el valor entero de la variable "a"
+    a = str(a) # ahora convertimos a la variable "a" en una cadena
+
+    b = str(int(input ("ing otro:"))) # pedimos el ingreso de otro valor,
+                                      #lo convertimos en entero y luego lo pasamos
+                                      # a cadena, se lo asignamos a la variable "b"
+    
+    
+    c = a+b #concatenamos "a" + "b" ya que son cadenas, NO valores numericos
+    print(a," + ",b," = ",c) # mostrsmos por pantalla la concatenacion de "a" + "b"
+    print(r," + ",x," = ",r+x) # mostramos por pantalla la suma de los valores
+                               #contenidos en las variables "r" + "x"
+
+# fin espacio de trabajo
+main()# nuestro metodo de trabajos, abrimos main()
+EJERCICIO 2
+Ejemplo que solicita leer dos valores y mostrar el mayor
+
+"""
+LEER 2 VALORES Y MOSTRAR EL MAYOR
+
+"""
+
+def main():
+    a = int(input("a: "))
+    b = int(input("b: "))
+
+    if a > b:
+        print("mayor ",a)
+    else:
+        print("mayor ",b)
+        
+
+main()
+Resultado
+
+>>> %Run 'Copia de majuma002.py'
+a: 2563
+b: 23
+mayor  2563
+>>> 
+Explicación:
+
+"""
+LEER 2 VALORES Y MOSTRAR EL MAYOR
+
+"""
+
+def main(): # cerramos el proceso principal -> main
+     # nuestro programa comienza aqui
+     
+    a = int(input("a: ")) # solicitamos el ingreso de un valor y lo convertimos a entero
+    b = int(input("b: ")) # solicitamos el ingreso de otro valor y lo convertimos a entero
+
+    #comparamos los valores pasados a enteros que almacenamos en las variables "a" y "b"
+    if a > b: # si el valor almacenado en la variable "a" es mayor al de la variable "b"
+        print("mayor ",a) # mostramo por pantalla que "a" es mayor  "b"
+    else: # sino
+        print("mayor ",b) # mostramos que el valor contenido en la variable "b" es el mayor
+        
+
+main() # abrimos el proceso principal -> main
+EJERCICIO 3
+Ejemplo que solicita leer dos valores y mostrarlos en orden
+
+"""
+LEER 2 VALORES Y MOSTRARLOS EN ORDEN
+
+"""
+
+def main():
+    mayor = int(input("ING UN VALOR: "))
+    menor = int(input("ING OTRO: "))
+
+    if menor > mayor:
+        otra = mayor
+        mayor = menor
+        menor = otra
+
+    print("mayor: ",mayor)
+    print("menor: ",menor)
+    
+    
+
+main()
+Resultado
+
+>>> %Run 'Copia de majuma003.py'
+ING UN VALOR: 3764
+ING OTRO: 65
+mayor:  3764
+menor:  65
+Explicación:
+
+"""
+LEER 2 VALORES Y MOSTRARLOS EN ORDEN
+
+"""
+
+def main():
+    mayor = int(input("ING UN VALOR: ")) # ingreso un valor y se lo asigno
+                                         # arbitrariamente a la variable "mayor"
+    menor = int(input("ING OTRO: ")) # ingreso otro valor y se lo asigno
+                                     #arbitrariamente a la variable "menor"
+
+    if menor > mayor:# si la variable "menor" es mayor a la
+                     # variable "mayor" asigno las variables como sigue:
+        otra = mayor # la variable "mayor" la asigno a la nueva variable "otra
+        mayor = menor # la variable "menor" se asigna a la variable "mayor" 
+        menor = otra # finalmente la variable "otra" que contenia el valor
+                     #de la variable "mayor" pasa a contener "menor"
+
+    print("mayor: ",mayor) # imprimo por pantalla el resultado de la variable "mayor"
+    print("menor: ",menor) # imprimo por pantalla el resultado de la variable "menor"
+    
+    
+
+main()
+EJERCICIO 4
+Ejemplo que solicita leer tres valores y mostrar el mayor
+
+"""
+    LEER 3 VALORES Y MOSTRAR EL MAYOR
+
+"""
+
+def main():
+    a = int(input("ING UN VALOR: "))
+    b = int(input("ING OTRO: "))
+    c = int(input("ING OTRO MAS: "))
+
+
+    mayor = a
+
+    if b>mayor:
+        mayor = b
+    
+    if c > mayor:
+        mayor = c
+    
+    print("mayor: ",mayor)
+   
+    
+    
+
+main()
+Resultado
+
+>>> %Run 'Copia de majuma004.py'
+ING UN VALOR: 4673
+ING OTRO: 90
+ING OTRO MAS: 3545456
+mayor:  3545456
+>>> 
+Explicación:
+
+EJERCICIO 5
+Ejemplo que solicita leer tres valores y mostrarlos como Máximo, Medio y Mínimo
+
+"""
+    leer 3 valores y mostrar:
+    max,med,min
+"""
+
+def main():
+    
+    a = int(input("ING UN VALOR: "))
+    b = int(input("ING OTRO: "))
+    c = int(input("ING OTRO MAS: "))
+
+    max = a
+    med = b
+    min = c
+
+    if b > max:
+        max = b
+        med = a
+        min = c
+
+    if c > max:
+        max = c
+        med = b
+        min = a
+
+    print("MAX: ",max)
+
+    if min > med:
+        aux = min
+        min = med
+        med = aux
+    print("MED: ",med)    
+    print("MIN: ",min)    
+
+main()
+Resultado
+
+>>> %Run 'Copia de majuma005.py'
+ING UN VALOR: 0
+ING OTRO: 46
+ING OTRO MAS: -768
+MAX:  46
+MED:  0
+MIN:  -768
+>>> 
+Explicación:
+
+EJERCICIO 6
+Ejemplo que IMPORTA un modulo (random) y genera 4 valores aleatorios y los muestra
+
+import random as R
+
+def main():
+    
+    a = R.randint(-10,10)
+    b = R.randint(-10,10)
+    c = R.randint(-10,10)
+    d = R.randint(-10,10)
+
+    print("a: ",a)
+    print("b: ",b)
+    print("c: ",c)
+    print("d: ",d)
+
+main()
+Resultado
+
+>>> %Run 'Copia de majuma006.py'
+a:  0
+b:  7
+c:  -4
+d:  1
+>>> 
+Explicación:
+
+EJERCICIO 7
+Ejemplo que IMPORTA un modulo (random) y genera 4 valores aleatorios y los muestra en orden; Primero, Segundo, Tercer, Cuarto
+
+"""
+Usar random para generar 4 valores y ordenarlos como Primero; Segundo. Tercero y Cuarto
+"""
+
+import random as R
+
+def main():
+    a = R.randint(1, 100)
+    b = R.randint(1, 100)
+    c = R.randint(1, 100)
+    d = R.randint(1, 100)
+    
+    print("primero: ",a)
+    print("segundo: ",b)
+    print("tercero: ",c)
+    print("cuarto: ",d)
+
+
+    
+    if a > b and a > c and a > d:
+        print ("el mayor es",a)
+    if b > a and b > c and b > d:
+        print ("el mayor es",b)
+    if c > a and c > b and c > d:
+        print ("el mayor es",c)
+    if d > a and d > b and d > c:
+        print ("el mayor es",d)
+        
+        
+    if a < b and a > c and a > d:
+        print ("el segundo es ",a)
+    if b < a and b > a and b > d:
+        print ("el segundo es ",b)
+    if c < a and c > b and c > d:
+        print ("el segundo es ",c)
+    if d < a and d > b and d > c:
+        print ("el segundo es ",d)
+        
+        
+    if a < b and a < c and a > d:
+        print ("el tercero es ",a)
+    if b < a and b < c and b > d:
+        print ("el tercero es ",b)
+    if c < a and c < b and c > d:
+        print ("el tercero es ",c)
+    if d < a and d < b and d > c:
+        print ("el tercero es ",d)
+        
+    
+    if a < b and a < c and a < d:
+        print ("el menor es ",a)
+    if b < a and b < c and b < d:
+        print ("el menor es",b)
+    if c < a and c < b and c < d:
+        print ("el menor es",c)
+    if d < a and d < b and d < c:
+        print ("el menor es",d)
+        
+    
+main()
+Resultado
+
+primero:  23
+segundo:  93
+tercero:  9
+cuarto:  14
+el mayor es 93
+el segundo es  23
+el tercero es  14
+el menor es 9
+>>> 
